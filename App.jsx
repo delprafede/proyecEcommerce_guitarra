@@ -13,8 +13,7 @@ function App() {
         <div className="row mt-5">
           <Guitarras />
           <Guitarras />
-          <Guitarras />
-          <Guitarras />
+        
         
 
           {/* <div className="col-md-6 col-lg-4 my-4 row align-items-center">
