@@ -1,6 +1,12 @@
 import { useMemo } from "react";
 
-export const Encabezado = ({ cart, removeFromCart, increment, decrement,clearCart }) => {
+export const Encabezado = ({
+  cart,
+  removeFromCart,
+  increment,
+  decrement,
+  clearCart,
+}) => {
   //State Derivado. (Sacando logica del return)
   // Se mantiene el estado de cart en el useMemo para que React detecte cuando cambia y actualice el total
   const isEmpty = useMemo(() => cart.length === 0, [cart]);
@@ -18,8 +24,8 @@ export const Encabezado = ({ cart, removeFromCart, increment, decrement,clearCar
               <a href="index.html">
                 <img
                   className="img-fluid"
-                  src="./public/img/logo.svg"
-                  alt="imagen logo"
+                  src="/img/logo.svg"
+                  alt="imagen logooooooo"
                 />
               </a>
             </div>
@@ -27,7 +33,7 @@ export const Encabezado = ({ cart, removeFromCart, increment, decrement,clearCar
               <div className="carrito">
                 <img
                   className="img-fluid"
-                  src="./public/img/carrito.png"
+                  src="/img/carrito.png"
                   alt="imagen carrito"
                 />
 
@@ -59,8 +65,11 @@ export const Encabezado = ({ cart, removeFromCart, increment, decrement,clearCar
                               <td>{guitar.name}</td>
                               <td className="fw-bold">${guitar.price}</td>
                               <td className="flex align-items-start gap-4">
-                                <button type="button" className="btn btn-dark"
-                                 onClick={() => decrement(guitar.id)}>
+                                <button
+                                  type="button"
+                                  className="btn btn-dark"
+                                  onClick={() => decrement(guitar.id)}
+                                >
                                   -
                                 </button>
                                 {guitar.quantity}
@@ -89,8 +98,10 @@ export const Encabezado = ({ cart, removeFromCart, increment, decrement,clearCar
                         Total pagar:{" "}
                         <span className="fw-bold">${totalCart}</span>
                       </p>
-                      <button className="btn btn-dark w-100 mt-3 p-2"
-                      onClick={()=> clearCart()}>
+                      <button
+                        className="btn btn-dark w-100 mt-3 p-2"
+                        onClick={() => clearCart()}
+                      >
                         Vaciar Carrito
                       </button>
                     </>
