@@ -1,4 +1,4 @@
-export const Guitarras = ({ guitar, setCart, cart }) => {
+export const Guitarras = ({ guitar, addToCart, cart }) => {
   const { id, name, description, image, price } = guitar;
  
   return (
@@ -14,7 +14,7 @@ export const Guitarras = ({ guitar, setCart, cart }) => {
         <button
           type="button"
           className="btn btn-dark w-100"
-          onClick={() => setCart((previewCart) => [...previewCart, guitar])}
+          onClick={() => addToCart(guitar)}
         >
           Agregar al Carrito
         </button>
